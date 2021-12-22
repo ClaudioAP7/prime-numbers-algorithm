@@ -1,0 +1,29 @@
+{
+  "name": "prime-numbers-algorithm",
+  "version": "1.0.0",
+  "description": "basic prime numbers algorithm using NodeJS + Express",
+  "main": "dist/app.js",
+  "scripts": {
+    "start": "tsc && node dist/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ClaudioAP7/prime-numbers-algorithm.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ClaudioAP7/prime-numbers-algorithm/issues"
+  },
+  "homepage": "https://github.com/ClaudioAP7/prime-numbers-algorithm#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "tslint": "^5.12.1",
+    "typescript": "^3.3.3"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
