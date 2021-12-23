@@ -1,23 +1,20 @@
-import express from 'express'
-import IndexRoutes from './routes'
-//import app from '../src/app'
+//import express from 'express'
+
+const express = require('express')
 
 // Initializations
 const app =  express()
-
 // Settings
 app.set('port', process.env.PORT || 3000)
 
 //Middlewares
 app.use(express.urlencoded({extended: false}))
 
-// Routes
-app.use('/primes', IndexRoutes)
-
-
 // Starting the server
-export const server = app.listen(app.get('port'), () => {
+const server = app.listen(app.get('port'), () => {
     console.log(`Server on port ${app.get('port')}`)
 })
 
+//export default { app, server }
+//module.exports = app
 export default app
