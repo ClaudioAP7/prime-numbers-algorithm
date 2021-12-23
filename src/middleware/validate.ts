@@ -2,16 +2,14 @@ import { Request, Response, NextFunction } from 'express'
 
 export const validateInput = (req: Request, res: Response, next: NextFunction) => {
     const inputValue = req.params.number
-    if(typeof inputValue == 'number') {
-        next()
+
+    if(+inputValue) {
+        if(+inputValue >= 2) {
+            next()
+        } else {
+            res.status(400).send('Input value must be greater than or equal to 2')            
+        }
     } else {
-        let error = { 
-            message: 'Invalid input value',
-            statusCode: 500
-         }
-        //let error: any = new Error('Invalid value')
-        let errorMessage = 'Invalid input value'
-        //error.statusCode = 400
-        next (error)
+        res.status(400).send('Invalid input value')
     }
 }

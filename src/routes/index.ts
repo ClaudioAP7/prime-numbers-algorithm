@@ -4,6 +4,6 @@ import { validateInput }  from '../middleware/validate'
 
 const router: Router = Router()
 
-router.get('/:number', indexController.index)
+router.get('/:number', validateInput, indexController.index)
 
 export default router
