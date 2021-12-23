@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import { indexController } from '../controllers/indexController'
+import { indexController } from '../controllers/generatePrime'
 import { validateInput }  from '../middleware/validate'
 
 const router: Router = Router()

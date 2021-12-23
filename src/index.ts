@@ -1,6 +1,5 @@
 import express from 'express'
-import IndexRoutes from './routes'
-//import app from '../src/app'
+import routes from './routes/router'
 
 // Initializations
 const app =  express()
@@ -12,7 +11,7 @@ app.set('port', process.env.PORT || 3000)
 app.use(express.urlencoded({extended: false}))
 
 // Routes
-app.use('/primes', IndexRoutes)
+app.use('/primes', routes)
 
 
 // Starting the server
@@ -20,4 +19,5 @@ export const server = app.listen(app.get('port'), () => {
     console.log(`Server on port ${app.get('port')}`)
 })
 
+// Exports
 export default app
