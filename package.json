@@ -9,7 +9,7 @@
     "build": "tsc",
     "start": "node build/src",
     "dev": "nodemon",
-    "test": "jest --coverage",
+    "test": "jest",
     "test:watch": "jest --watch"
   },
   "repository": {
