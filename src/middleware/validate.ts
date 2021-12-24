@@ -3,7 +3,7 @@ import { Request, Response, NextFunction } from 'express'
 export const validateInput = (req: Request, res: Response, next: NextFunction) => {
     const inputValue = req.params.number
 
-    if(+inputValue) {
+    if(+inputValue === parseInt(inputValue, 10)) {
         if(+inputValue >= 2) {
             next()
         } else {

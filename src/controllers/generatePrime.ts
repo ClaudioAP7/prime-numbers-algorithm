@@ -1,14 +1,14 @@
 import { Request, Response } from 'express'
 
-class IndexController {
-    public index(req: Request, res: Response) {
+class Primes {
+    public getPrimes(req: Request, res: Response) {
         const number = Number(req.params.number)
-        const primeNumberList = generatePrime(number)
-        res.status(200).send(primeNumberList)
+        const primeNumberList = generatePrimeNumbers(number)
+        return res.status(200).send(primeNumberList)
     }
 }
 
-const generatePrime = (numberValue: number) => {
+const generatePrimeNumbers = (numberValue: number) => {
     let numberList = []
     let primeElements = []
 
@@ -28,5 +28,5 @@ const generatePrime = (numberValue: number) => {
     return numberList.sort((a, b) => b - a)
 }
 
-export const indexController = new IndexController()
-export default generatePrime
+export const primes = new Primes()
+export default generatePrimeNumbers
