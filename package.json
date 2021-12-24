@@ -1,0 +1,40 @@
+{
+  "name": "prime-numbers-algorithm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "ts:node": "ts-node src/index.ts",
+    "clean": "rm -rf build",
+    "build": "tsc",
+    "start": "node build/src",
+    "dev": "nodemon",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ClaudioAP7/prime-numbers-algorithm.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ClaudioAP7/prime-numbers-algorithm/issues"
+  },
+  "homepage": "https://github.com/ClaudioAP7/prime-numbers-algorithm#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/jest": "^27.0.3",
+    "@types/supertest": "^2.0.11",
+    "jest": "^27.4.5",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.1.6",
+    "ts-jest": "^27.1.2",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.4"
+  }
+}
